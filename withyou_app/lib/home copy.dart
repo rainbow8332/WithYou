@@ -309,7 +309,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         children: const [
           FirstPage(),
           SecondPage(),
-          Third()
+          // Third()
         ]
       ),
       bottomNavigationBar: Container(
