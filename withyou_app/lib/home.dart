@@ -74,7 +74,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 trailing: Icon(Icons.add),
               ),
               const ListTile(
-               leading: SizedBox(
+                leading: SizedBox(
                   child: Icon(
                     CupertinoIcons.paw,
                     color: Colors.black,
@@ -103,21 +103,29 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         ),
         backgroundColor: Colors.white,
         actions: const [
-          Icon(
-            CupertinoIcons.bell_fill,
-            color: Colors.black,
-            size: 30,
+          Padding(
+            padding: EdgeInsets.only(right: 15, top: 5),
+            child: Icon(
+              CupertinoIcons.bell_fill,
+              color: Colors.black,
+              size: 30,
+            ),
           ),
         ],
       ),
       body: TabBarView(
-          controller: controller,
-          children: const [SecondPage(), FirstPage(), ThirtPage()]),
+        controller: controller,
+        children: const [
+          FirstPage(),
+          SecondPage(),
+          ThirtPage(),
+        ],
+      ),
       bottomNavigationBar: Container(
         color: Colors.amberAccent,
-        height: 60,
+        height: 65,
         child: Padding(
-          padding: const EdgeInsets.only(top: 8),
+          padding: const EdgeInsets.only(top: 10),
           child: TabBar(
               controller: controller,
               labelColor: Colors.black,
