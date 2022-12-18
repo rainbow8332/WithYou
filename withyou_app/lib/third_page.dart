@@ -11,14 +11,12 @@ class _ThirtPageState extends State<ThirtPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text('세번째 페이지'),
-          )
-        ],
-      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Image.asset(
+                          'images/subtitle2.png',
+                        ),
+      )
     );
   }
 }
