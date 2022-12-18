@@ -11,7 +11,10 @@ class SecondPage extends StatefulWidget {
   State<SecondPage> createState() => _SecondPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
+  // 탭바 영역
+  late TabController controller;
+
   // 카드뷰 영역_3초마다 변경
   late List imageName; // 반복할 이미지들
   late int currentImage; // 현재이미지
@@ -27,6 +30,13 @@ class _SecondPageState extends State<SecondPage> {
   @override
   void initState() {
     super.initState();
+
+    // 탭바 영역
+    controller = TabController(
+        length: 3, // 탭 갯수
+        vsync: this // this -> home
+        );
+
 
     // 카드뷰 영역_3초마다 변경
     imageName = ['pets.jpg', 'walwal2.jpg', 'walwal4.jpg'];
@@ -59,10 +69,11 @@ class _SecondPageState extends State<SecondPage> {
 
   } // initState End
 
-@override
-  void dispose() {
-    super.dispose();
-  }
+// @override
+//   void dispose() {
+//     controller.dispose();
+//     super.dispose();
+//   }
 
 
   @override
@@ -201,7 +212,7 @@ class _SecondPageState extends State<SecondPage> {
   }
   //   // --------------- Functions----------------
 
-// // 카드뷰 이미지와 텍스트 [S]
+// 카드뷰 이미지와 텍스트 [S]
   changeImage() {
     setState(() {
       currentImage++;

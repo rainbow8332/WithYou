@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:withyou_app/home.dart';
+import 'package:withyou_app/second_page.dart';
 import 'package:withyou_app/splash.dart';
 
 void main() {

@@ -11,7 +11,10 @@ class SecondPage extends StatefulWidget {
   State<SecondPage> createState() => _SecondPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
+  // 탭바 영역
+  late TabController controller;
+
   // 카드뷰 영역_3초마다 변경
   late List imageName; // 반복할 이미지들
   late int currentImage; // 현재이미지
@@ -27,6 +30,12 @@ class _SecondPageState extends State<SecondPage> {
   @override
   void initState() {
     super.initState();
+
+    // 탭바 영역
+    controller = TabController(
+        length: 3, // 탭 갯수
+        vsync: this // this -> home
+        );
 
     //     // 카드뷰 영역_3초마다 변경
     imageName = ['pets.jpg', 'walwal2.jpg', 'walwal4.jpg'];
@@ -57,15 +66,14 @@ class _SecondPageState extends State<SecondPage> {
     dogBreedList
         .add(DogBreedList(imagePath: 'images/bichon.jpg', dogName: '몽이'));
 
-  iconList = [
-  '안녕하세요 🙌',
-  '뿔테안경의 플러터 🤩',
-  'Cool 👍🏼',
-  'Amazing 👍🏼',
-];
-
 
   } // initState End
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
