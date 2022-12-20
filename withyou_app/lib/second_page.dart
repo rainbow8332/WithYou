@@ -14,6 +14,7 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
   // 탭바 영역
   late TabController controller;
+  late  Timer timer;
 
   // 카드뷰 영역_3초마다 변경
   late List imageName; // 반복할 이미지들
@@ -52,7 +53,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
     currentImage = 0;
 
     // 카드뷰 타이머
-    Timer.periodic(const Duration(seconds: 1), (Timer timer) {
+    timer = Timer.periodic(const Duration(seconds: 2), (Timer timer) {
       changeImage();
       changeTextTitle();
       // changeTextContents();
@@ -72,6 +73,9 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
 @override
   void dispose() {
     controller.dispose();
+    if(timer != null){
+      timer!.cancel();
+    }
     super.dispose();
   }
 
@@ -88,11 +92,13 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
                 padding: const EdgeInsets.only(left: 30, right: 30),
                 child: Column(
                   children: [
+
                     Padding(
                       padding: const EdgeInsets.only(top: 5),
                       child: SizedBox(
                         height: 50,
-                        child: Image.asset(
+                        child: 
+                        Image.asset(
                           'images/${textNameTitle[currentImage]}',
                         ),
                       ),
@@ -114,6 +120,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
                         // 'images/pets.jpg'),
                       ),
                     ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: SizedBox(
@@ -201,6 +208,8 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
                     ],
                     ),
                     
+
+
                   ],
                 ),
               ),
@@ -210,7 +219,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
       ),
     );
   }
-  //   // --------------- Functions----------------
+  //  --------------- Functions----------------
 
 // 카드뷰 이미지와 텍스트 [S]
   changeImage() {
