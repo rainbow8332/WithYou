@@ -60,8 +60,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                title: Text('로그인'),
-                trailing: Icon(Icons.add),
+                title: const Text('로그인',
+                style: TextStyle(
+                  fontSize: 20
+                ),
+                ),
+                trailing: const Icon(Icons.add),
               ),
               const ListTile(
                 leading: SizedBox(
@@ -70,7 +74,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     color: Colors.black,
                   ),
                 ),
-                title: Text('1일 1영상'),
+                title: Text('1일 1영상',
+                style: TextStyle(
+                  fontSize: 20
+                ),
+                
+                ),
                 trailing: Icon(Icons.add),
               ),
               const ListTile(
@@ -80,7 +89,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     color: Colors.black,
                   ),
                 ),
-                title: Text('너와 나의 연결고리'),
+                title: Text('너와 나의 연결고리',
+                style: TextStyle(
+                  fontSize: 20
+                ),
+                ),
                 trailing: Icon(Icons.add),
               ),
             ],
@@ -116,8 +129,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       body: TabBarView(
         controller: controller,
         children: const [
-          FirstPage(),
           SecondPage(),
+          FirstPage(),
           ThirtPage(),
         ],
       ),

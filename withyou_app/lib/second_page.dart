@@ -52,7 +52,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
     currentImage = 0;
 
     // 카드뷰 타이머
-    Timer.periodic(const Duration(seconds: 3), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 1), (Timer timer) {
       changeImage();
       changeTextTitle();
       // changeTextContents();
@@ -69,11 +69,11 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin{
 
   } // initState End
 
-// @override
-//   void dispose() {
-//     controller.dispose();
-//     super.dispose();
-//   }
+@override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
 
   @override
