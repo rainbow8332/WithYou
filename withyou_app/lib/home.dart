@@ -67,19 +67,22 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 ),
                 trailing: const Icon(Icons.add),
               ),
-              const ListTile(
-                leading: SizedBox(
+               ListTile(
+                leading: const SizedBox(
                   child: Icon(
                     CupertinoIcons.arrowtriangle_right_square_fill,
                     color: Colors.black,
                   ),
                 ),
-                title: Text('1일 1영상',
+                title: const Text('1일 1영상',
                 style: TextStyle(
+
                   fontSize: 20
                 ),
-                
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/thirtPage');
+                },
                 trailing: Icon(Icons.add),
               ),
               const ListTile(
@@ -129,9 +132,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       body: TabBarView(
         controller: controller,
         children: const [
-          SecondPage(),
           FirstPage(),
-          ThirtPage(),
+          SecondPage(),
+          ThirdPage(),
         ],
       ),
       bottomNavigationBar: Container(

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:custom_grid_view/custom_grid_view.dart';
 
-class ThirtPage extends StatefulWidget {
-  const ThirtPage({super.key});
+class ThirdPage extends StatefulWidget {
+  const ThirdPage({super.key});
 
   @override
-  State<ThirtPage> createState() => _ThirtPageState();
+  State<ThirdPage> createState() => _ThirdPageState();
 }
 
-class _ThirtPageState extends State<ThirtPage> {
+class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
