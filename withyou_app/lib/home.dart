@@ -58,7 +58,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   ),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/loginPage');
                 },
                 title: const Text('로그인',
                 style: TextStyle(
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 ),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/thirtPage');
+                  Navigator.pushNamed(context, '/videoPage');
                 },
                 trailing: Icon(Icons.add),
               ),

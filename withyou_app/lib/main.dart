@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:withyou_app/home.dart';
+import 'package:withyou_app/login_page.dart';
 import 'package:withyou_app/second_page.dart';
 import 'package:withyou_app/splash.dart';
 import 'package:withyou_app/third_page.dart';
+import 'package:withyou_app/video_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => Splash(),
         '/home' : (context) => Home(),
-        '/thirtPage' : (context) => ThirdPage(),
+        '/thirdPage' : (context) => ThirdPage(),
+        '/videoPage' : (context) => VideoPage(),
+        '/loginPage' : (context) => LoginPage(),
       },
     );
   }
