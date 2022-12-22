@@ -90,7 +90,7 @@ class _VideoPageState extends State<VideoPage> {
                 width: 100,
                 child: OutlinedButton(
                   onPressed: () {
-                    //
+                     Navigator.pushNamed(context, '/videostep01Page');
                   },
                   style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.green,
