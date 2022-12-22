@@ -30,7 +30,7 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin {
                 child: SizedBox(
                               width: 130,
                               child: Image.asset(
-                                'images/subtitle3.png',
+                                'images/subtitle3.png', // 댕댕이 작명소 
                               ),
                             ),
               ),
@@ -45,16 +45,21 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin {
                       padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          Image.asset(
-                              'images/coca.png',
-                              fit: BoxFit.fill,
-                            ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/firstPageDetail01Page');
+                            },
+                            child: Image.asset(
+                                'images/coca.png',
+                                fit: BoxFit.fill,
+                              ),
+                          ),
                             Padding(
                               padding: const EdgeInsets.only(top: 12),
                               child: SizedBox(
                                 height: 30,
                                 child: Image.asset(
-                                  'images/subtitle5.png',
+                                  'images/subtitle5.png', // 너의 이름은? 이름을 지어주세요.
                                   fit: BoxFit.fill,
                                 ),
                               ),
@@ -71,7 +76,7 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin {
                 child: SizedBox(
                                 width: 110,
                                 child: Image.asset(
-                                  'images/subtitle4.png',
+                                  'images/subtitle4.png', // 일상 이야기 
                                 ),
                               ),
               ),
@@ -96,7 +101,7 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin {
                               child: SizedBox(
                                 height: 35,
                                 child: Image.asset(
-                                  'images/subtitle6.png',
+                                  'images/subtitle6.png', // 뭐하고 놀았 개~
                                   fit: BoxFit.fill,
                                 ),
                               ),

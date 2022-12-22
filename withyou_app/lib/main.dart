@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:withyou_app/first_page_detail01.dart';
 import 'package:withyou_app/home.dart';
 import 'package:withyou_app/login_page.dart';
 import 'package:withyou_app/second_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/loginPage' : (context) => LoginPage(),
         '/videostep01Page' : (context) => VideoStep01Page(),
         '/videostep02Page' : (context) => VideoStep02Page(),
+        '/firstPageDetail01Page' : (context) => FirstPageDetail01Page(),
       },
     );
   }
