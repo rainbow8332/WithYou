@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:withyou_app/first_page_detail01.dart';
 import 'package:withyou_app/home.dart';
 import 'package:withyou_app/login_page.dart';
-import 'package:withyou_app/second_page.dart';
 import 'package:withyou_app/splash.dart';
 import 'package:withyou_app/third_page.dart';
 import 'package:withyou_app/video_page.dart';
@@ -34,6 +33,8 @@ class MyApp extends StatelessWidget {
         '/videostep01Page' : (context) => VideoStep01Page(),
         '/videostep02Page' : (context) => VideoStep02Page(),
         '/firstPageDetail01Page' : (context) => FirstPageDetail01Page(),
+        // '/firstPageInsert' : (context) => FirstPageInsert(),
+        // '/firstPageContent' : (context) => FirstPageContent(),
       },
     );
   }
